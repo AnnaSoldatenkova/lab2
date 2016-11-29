@@ -1,0 +1,102 @@
+<database>
+    <drivers>
+        <driver>
+            <name>name 12</name>
+            <phone>phone 12</phone>
+        </driver>
+
+        <driver>
+            <name>name 22</name>
+            <phone>phone 22</phone>
+        </driver>
+
+        <driver>
+            <name>name 32</name>
+            <phone>phone 32</phone>
+        </driver>
+
+        <driver>
+            <name>name 42</name>
+            <phone>phone 42</phone>
+        </driver>
+
+    </drivers>
+
+    <clients>
+        <client>
+            <name>name 11</name>
+            <phone>phone 11</phone>
+        </client>
+
+        <client>
+            <name>name 21</name>
+            <phone>phone 21</phone>
+        </client>
+
+        <client>
+            <name>name 31</name>
+            <phone>phone 31</phone>
+        </client>
+
+    </clients>
+
+    <addresses>
+        <address>
+            <name>adr 13</name>
+            <x>5</x>
+            <y>10</y>
+        </address>
+
+        <address>
+            <name>adr 23</name>
+            <x>10</x>
+            <y>5</y>
+        </address>
+
+        <address>
+            <name>adr 33</name>
+            <x>10</x>
+            <y>10</y>
+        </address>
+
+        <address>
+            <name>adr 43</name>
+            <x>5</x>
+            <y>5</y>
+        </address>
+    </addresses>
+
+    <orders>
+        <order>
+            <start_id>2</start_id>
+            <finish_id>3</finish_id>
+            <car_id>2</car_id>
+            <client_id>3</client_id>
+            <date>2015-12-31 22:59:59</date>
+        </order>
+
+        <order>
+            <start_id>1</start_id>
+            <finish_id>4</finish_id>
+            <car_id>4</car_id>
+            <client_id>2</client_id>
+            <date>2015-12-31 20:40:00</date>
+        </order>
+
+        <order>
+            <start_id>1</start_id>
+            <finish_id>3</finish_id>
+            <car_id>1</car_id>
+            <client_id>3</client_id>
+            <date>2015-12-31 15:00:50</date>
+        </order>
+
+        <order>
+            <start_id>4</start_id>
+            <finish_id>1</finish_id>
+            <car_id>2</car_id>
+            <client_id>1</client_id>
+            <date>2015-12-31 16:40:00</date>
+        </order>
+    </orders>
+</database>

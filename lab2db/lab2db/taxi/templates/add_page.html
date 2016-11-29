@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+
+    <script src="{% static "jquery-2.2.4.min.js" %}"></script>
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/core.css" %}" rel="stylesheet">
+
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <style>
+        .btn_lmargin {
+            margin-left: 10%;
+        }
+
+        .inner {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+{% if not export_mode %}
+    <div class="jumbotron">
+        <center><h2>Add order</h2></center>
+    </div>
+{% endif %}
+<form action={{ request.get_full_path }} method="post" class="form-vertical" role="form">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="car_id">Driver:</label>
+        <select class="form-control" id="car_id" name="car_id">
+            {% for driver in car %}
+                <option value="{{ driver.id }}">{{ driver.driver_name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="client_id">Client:</label>
+        <select class="form-control" id="client_id" name="client_id">
+            {% for cl in client %}
+                <option value="{{ cl.id }}">{{ cl.client_name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="start_id">Start point:</label>
+        <select class="form-control" id="start_id" name="start_id">
+            {% for adr in address %}
+                <option value="{{ adr.id }}">{{ adr.address_name }}, {{ adr.address_y }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="finish_id">Start point:</label>
+        <select class="form-control" id="finish_id" name="finish_id">
+            {% for adr in address %}
+                <option value="{{ adr.id }}">{{ adr.address_name }}, {{ adr.address_y }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Date:</label>
+        <div class="form-group">
+            <input id="entry-day-time" name="entry-day-time" type="datetime">
+        </div>
+    </div>
+
+    <input type="submit" name="add" value="Add"/>
+</form>
+</body>
+</html>

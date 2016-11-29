@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - taxi_db@localhost" uuid="633917d4-d442-422a-b733-4bb49f789503">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>taxi_db:*</introspection-scope>
+      <resolve-scope>taxi_db:*</resolve-scope>
+    </data-source>
+  </component>
+</project>
